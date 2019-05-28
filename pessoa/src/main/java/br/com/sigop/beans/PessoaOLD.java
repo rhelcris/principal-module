@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Pessoa {
+public class PessoaOLD {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -14,9 +14,9 @@ public class Pessoa {
 	private String nome;
 	private String telefone;
 	
-	public Pessoa() { }
+	public PessoaOLD() { }
 	
-	public Pessoa(String nome, String telefone) {
+	public PessoaOLD(String nome, String telefone) {
 		this.nome = nome;
 		this.telefone = telefone;
 	}

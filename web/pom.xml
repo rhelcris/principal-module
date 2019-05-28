@@ -36,6 +36,21 @@
          <artifactId>folhas-pagamento</artifactId>
          <version>0.0.1-SNAPSHOT</version>
      </dependency>
+     
+     <dependency>
+     	<groupId>maven-modules-project</groupId>
+     	<artifactId>sigop-money</artifactId>
+         <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+     
+     <dependency>
+     	<groupId>maven-modules-project</groupId>
+     	<artifactId>security</artifactId>
+         <version>1.0.0-SNAPSHOT</version>
+     </dependency>
+     
+     
+      
        
    </dependencies>
    

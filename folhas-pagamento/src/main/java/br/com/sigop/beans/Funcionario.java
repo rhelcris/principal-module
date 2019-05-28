@@ -5,10 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.sigop.beans.Pessoa;
+import br.com.sigop.beans.PessoaOLD;
 
 @Entity
-public class Funcionario extends Pessoa {
+public class Funcionario extends PessoaOLD {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
