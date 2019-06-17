@@ -25,7 +25,7 @@ public class CorsFilter implements Filter {
 	@Autowired
 	private SigopApiProperties sigopProperties;
 	
-	private String origemPermitida = "http://localhost:8080"; // TODO: Configurar para diferentes ambientes
+//	private String origemPermitida = "http://localhost:8080"; // TODO: Configurar para diferentes ambientes
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
@@ -38,7 +38,8 @@ public class CorsFilter implements Filter {
 		response.setHeader("Access-Control-Allow-Origin", sigopProperties.getOrigemPermitida());
 		response.setHeader("Access-Control-Allow-Credentials", "true");
 		
-		if("OPTIONS".equals(request.getMethod()) && origemPermitida.equals(request.getHeader("Origin"))) {
+//		if("OPTIONS".equals(request.getMethod()) && origemPermitida.equals(request.getHeader("Origin"))) {
+		if("OPTIONS".equals(request.getMethod()) && sigopProperties.getOrigemPermitida().equals(request.getHeader("Origin"))) {
 			response.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS");
 			response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
 			response.setHeader("Access-Control-Max-Age", "3600");

@@ -35,7 +35,8 @@ public class CategoriaResource {
 	
 	
 	@GetMapping
-	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_CATEGORIA') and #oauth2.hasScope('read')")
+//	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_CATEGORIA') and #oauth2.hasScope('read')")
+//	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_CATEGORIA')")
 	public List<Categoria> listar() {
 		return categoriaRepository.findAll();
 	}
